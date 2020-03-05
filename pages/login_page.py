@@ -3,14 +3,14 @@ from .locators import LoginPageLocators
 
 
 class LoginPage(BasePage):
-    def should_be_login_page(self, browser):
-        self.should_be_login_url(browser)
+    def should_be_login_page(self):
+        self.should_be_login_url()
         self.should_be_login_form()
         self.should_be_register_form()
 
-    def should_be_login_url(self, browser):
+    def should_be_login_url(self):
         # реализуйте проверку на корректный url адрес
-        assert "login" in browser.current_url.text
+        assert "login" in self.browser.current_url, "This page is not login"
 
     def should_be_login_form(self):
         # реализуйте проверку, что есть форма логина
