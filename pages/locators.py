@@ -6,5 +6,5 @@ class MainPageLocators:
 
 class LoginPageLocators:
     LOGIN_URL = (By.CSS_SELECTOR, "div.container-fluid.page > div > ul > li.active")
-    LOGIN_FORM = (By.ID, "#login_form")
-    REGISTER_FORM = (By.ID, "#register_form")
+    LOGIN_FORM = (By.CSS_SELECTOR, "#login_form")
+    REGISTER_FORM = (By.CSS_SELECTOR, "#register_form")
